@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html{
+            text-align: center;
+        }
+        form{
+            margin-top: 20%;
+display: inline-block;
+            border: solid green;
+            padding: 30px;
+         
+margin: auto;
+           
+        }
+        input{
+            
+            width:250px;
+            height: 30px;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+            margin: 5px;
+            border: solid 0;
+            border-radius: 20px;
+            
+        }
+        button{
+            background-color: red;
+            width: 200px;
+            height: 30px;
+            color: white;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="/login" method="post">
+        <input type="number" name="appId" placeholder="Applicaton Number"  required><br>
+        <input type="text" name="dob" placeholder="dd-mm-yyyy"  required><br>
+       <button type="submit">Log In</button>
+    </form>
+</body>
+</html>

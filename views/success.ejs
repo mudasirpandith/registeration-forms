@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        body{
+            text-align: center;
+        }
+        .header{
+              color:green;
+            padding: 20px;
+            text-align: center;
+
+        }
+        a{
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+
+        <img src="https://www.cntraveller.in/wp-content/themes/cntraveller/images/check-circle.gif" alt="">
+    </center>
+    <div class="header"><h1>You have Registered Successfully</h1></div>
+    <h2>Your Application Number:<%=APPLICATION_NUMBER  %></h2>
+ <!-- <a href="/downloadApp/<%=APPLICATION_NUMBER %>"> Download Conformation Page</a> -->
+
+ <form action="/downloadApp" method="post">
+    <input type="number" name="appId" value="<%= APPLICATION_NUMBER %>" onclick="submit()">
+ </form>
+</body>  
+</html>

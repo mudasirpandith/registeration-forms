@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+     <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body,html{
+            margin: 0;
+            background-color: rgb(219, 210, 210);
+         
+        }
+        .heading{
+            text-align: center;
+            color:wheat;
+            background-color: teal;
+            margin-top: 0;
+            padding: 20px;
+        }
+        
+form, p {
+  margin: 20px;
+}
+
+p.note {
+  font-size: 1rem;
+  color: red;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-family: 'Lato';
+  width: 300px;
+  margin-top: 10px;
+}
+
+label {
+  width: 100px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label.error {
+    color: red;
+    font-size: .6rem;
+    display: block;
+    margin-top: 1px;
+}
+
+input.error {
+    border: 1px solid red;
+    font-weight: 300;
+    color: red;
+}
+
+[type="submit"], [type="reset"], button, html [type="button"] {
+    margin-left: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 300;
+    padding: 10px 0;
+    line-height: 1;
+}
+span{
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="heading">
+
+        <h1>Senoir School of Technical Education</h1>
+        <h3>Registeration cum Admission for class 9th </h3>
+    </div>
+     <p><span>*</span> marked field are mendatory
+      <a style="float: right;" href="/login">Already Registered</a>
+   
+     .</p>
+     <form id="basic-form" action="/" method="POST">
+        <div class="container">
+            <h3>Candidate's Information</h3>
+            <div class="row">
+                
+              <div class="col-sm col-lg-6">
+               
+                <p>
+                  <label for="name">Name <span>*</span></label>
+                  <input  name="name"  type="text" required>
+                </p>
+                <p>
+                  <label for="fatherName">Father's Name<span>*</span></label>
+                  <input  type="text" name="fatherName" required>
+                </p>
+                 <p>
+                    <label for="motherName">Mother's Name<span>*</span></label>
+                    <input  type="text" name="motherName" required>
+                  </p>
+                  <p>
+                    <label for="dob">Date of Birth<span>*</span></label>
+                    <input  type="text" name="dob" pattern="dd-mm-yyyy" required>
+                  </p>
+
+              </div>
+              <div class="col-sm col-lg-6">
+                <p>
+                    <label for="gender">Gender<span>*</span></label>
+                    <select id="gender" name="gender">
+                        <option name="male">Male</option>
+                        <option name="female">Female</option>
+                        <option name="other">Other</option>
+                          </select>
+                  </p>
+                <p>
+                    <label for="residence">Residence<span>*</span></label>
+                    <input  type="text" name="residence" required>
+                  </p>
+                  <p>
+                    <label for="tehsil">Teshil<span>*</span></label>
+                    <input  type="text" name="tehsil" required>
+                  </p>
+                  <p>
+                    <label for="pin">PIN Code<span>*</span></label>
+                    <input  type="number" minlength="6" name="pin" required>
+                  </p>
+                 
+                  <p>
+                    <label for="district">District<span>*</span></label>
+                    <input  type="text" name="District" required>
+                  </p>
+                 
+                  
+              </div>
+             
+            </div>
+          </div>
+         
+          <div class="container">
+            <div class="row">
+              <div class="col-sm col-lg-6">
+                <p>
+                    <label for="category">Category<span>*</span></label>
+                    <select id="category" name="category">
+                        <option name="General ">General</option>
+                        <option name="RBA">RBA</option>
+                        <option name="ST">ST</option>
+                        <option name="SC ">SC</option>
+                        <option name="OBC">OBC</option>
+                        <option name="PSP">PSP</option>
+                        <option name="PWD">PWD</option>
+                          </select>
+
+                  </p>
+                  <p>
+                    <label for="rationCard">Ration Card<span>*</span></label>
+                    <select id="rationCard" name="rationCard">
+                    <option name="APL">APL</option>
+                    <option name="BPL">BPL</option>
+                    <option name="AAY">AAY</option>
+                    <option name="PHH">PHH</option>
+                   
+                </select>
+                  </p>
+                  <p>
+                    <label for="lastSchool">Last School Studied<span>*</span></label>
+                    <input  type="text" name="lastSchool" required>
+                  </p>
+                  <p>
+                    <label for="contactNumber">Phone Number<span>*</span></label>
+                    <input  type="number" minlength="10" name="contactNumber" required>
+                  </p>
+                 
+              </div>
+              <div class="col-sm col-lg-6">
+                <p>
+                    <label for="adhar">Adhar Number<span>*</span></label>
+                    <input  type="number" minlength="12" name="adhar" required>
+                  </p>
+                  <p>
+                    <label for="accountNumber">Bank Account Number<span>*</span></label>
+                    <input  type="number" name="accountNumber" required>
+                  </p>
+                  <p>
+                    <label for="ifsc">Bank IFSC Code<span>*</span></label>
+                    <input  type="text" minlength="11" name="ifsc" required>
+                  </p>
+                 
+            </div>
+             
+            </div>
+          </div>
+
+
+        <p> 
+          <input class="submit" type="submit" value="SUBMIT">
+        </p>
+    </form>
+    
+    <script>
+    $(document).ready(function() {
+        $("#basic-form").validate();
+      });
+    </script>
+</body>
+</html>
