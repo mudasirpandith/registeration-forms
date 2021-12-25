@@ -80,7 +80,7 @@ app.get('/login',(req,res)=>{
         contactNumber:req.body.contactNumber,
         adhar:req.body.adhar,
         accountNumber:req.body.accountNumber,
-        ifsc:req.body.ifsc.toUpperCase(),
+        ifsc:req.body.ifsc,
         applicationNumber:APPLICATION_NUMBER,
 
       })
