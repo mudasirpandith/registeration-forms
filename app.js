@@ -65,8 +65,8 @@ app.get('/login',(req,res)=>{
   
 })
    const student=new students({
-        name:req.body.name,
-        fatherName:req.body.fatherName,
+        name:req.body.name.toUpperCase(),
+        fatherName:req.body.fatherName.toUpperCase(),
         motherName:req.body.motherName,
         dob:req.body.dob,
         gender:req.body.gender,
